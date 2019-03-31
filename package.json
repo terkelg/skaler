@@ -1,0 +1,38 @@
+{
+  "name": "skaler",
+  "version": "1.0.0-beta.0",
+  "repository": "terkelg/skaler",
+  "description": "A 329B client-side image resizer.",
+  "main": "dist/skaler.mjs",
+  "module": "dist/skaler.mjs",
+  "unpkg": "dist/skaler.umd.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "start": "http-server demo --silent -o & npm run watch",
+    "watch": "microbundle watch --format umd --entry demo/src/index.js --output demo/dist/bundle.js",
+    "build": "microbundle --name skaler --format es,umd --sourcemap false",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "dom",
+    "image",
+    "photo",
+    "picture",
+    "img",
+    "scaling",
+    "scale",
+    "files",
+    "file",
+    "upload",
+    "form",
+    "input"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "microbundle": "^0.11.0"
+  }
+}
