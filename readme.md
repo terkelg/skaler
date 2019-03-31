@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="skaler.png" alt="skaler" width="220" />
+  <img src="skaler.png" alt="skaler" width="180" />
 </p>
 
 <p align="center">
@@ -61,6 +61,13 @@ The script can also be directly included from [unpkg.com](https://unpkg.com):
 ```js
 import skaler from 'skaler';
 
+/**
+ * Assume 'input' is the value coming from an input field:
+ * <input type="file" accept="image/*" id="input" >
+ */
+
+const input = document.getElementById('#input').files[0];
+
 const file = await skaler(input, { scale: 0.5 });
 // ~> resized image as a File object - half the size
 
@@ -75,7 +82,7 @@ const file = await skaler(input, { width: 300, height: 500 });
 
 ## API
 
-### skaler(file, options=`{}`)
+### skaler(file, options=`{})
 Returns: `File` <_Promise_>
 
 Reutnrs promise that resolves to the resized [`File`](https://developer.mozilla.org/en-US/docs/Web/API/File) object.
