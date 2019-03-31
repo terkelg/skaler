@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="skaler.png" alt="skaler" width="180" />
+  <img src="skaler.png" alt="skaler" width="150" />
 </p>
 
 <p align="center">
