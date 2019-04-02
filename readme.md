@@ -82,7 +82,7 @@ const file = await skaler(input, { width: 300, height: 500 });
 
 ## API
 
-### skaler(file, options=`{})
+### skaler(file, options={})
 Returns: `File` <_Promise_>
 
 Reutnrs promise that resolves to the resized [`File`](https://developer.mozilla.org/en-US/docs/Web/API/File) object.
@@ -138,6 +138,11 @@ Rename file during resizing. Defaults to the name of the input [`File`](https://
 Type: `String`<br>
 
 A `string` representing the `MIME` type of the content that will be put into the file. Defaults to a value of the input [`File`](https://developer.mozilla.org/en-US/docs/Web/API/File).
+
+
+## Future
+
+I'd plan to optimize for even better performacne and smaller code using `offscreenCanvas` and `workers` in the future as browser support gets better. I also considered `createImageBitmap()` but it's currently not supported in Safari.
 
 
 ## License
