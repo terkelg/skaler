@@ -4,7 +4,6 @@ export default function skaler(file, { scale, width, height, name = file.name, t
 		reader.readAsDataURL(file);
 		reader.onload = e => {
 			const img = new Image();
-			img.src = e.target.result;
 			img.onload = () => {
 				const el = document.createElement('canvas');
 				const dir = (width < img.width || height < img.height) ? 'min' : 'max';
@@ -20,6 +19,7 @@ export default function skaler(file, { scale, width, height, name = file.name, t
 				el.toBlob(blob => res(new File([blob], name, { type, lastModified: Date.now() })));
 				reader.onerror = rej;
 			}
+			img.src = e.target.result;      
 		}
 	});
 }
