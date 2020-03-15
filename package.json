@@ -1,6 +1,6 @@
 {
   "name": "skaler",
-  "version": "1.0.8",
+  "version": "1.0.7",
   "repository": "terkelg/skaler",
   "description": "A 329B client-side image resizer.",
   "main": "dist/skaler.mjs",
